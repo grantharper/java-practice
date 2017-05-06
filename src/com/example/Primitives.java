@@ -1,6 +1,6 @@
 package com.example;
 
-public class Application {
+public class Primitives {
 
 	public static void main(String... args) {
 		System.out.println("Program is running");

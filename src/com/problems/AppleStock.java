@@ -1,4 +1,4 @@
-package com.practice;
+package com.problems;
 
 public class AppleStock {
 

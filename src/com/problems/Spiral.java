@@ -1,4 +1,4 @@
-package com.example;
+package com.problems;
 
 public class Spiral {
 	
