@@ -34,6 +34,17 @@ public class Office {
             System.out.println(emp.getName() + " now makes $" + emp.getSalary());
         }
         
+        System.out.println("Coding time");
+        
+        for(Employee emp: office.getAllEmployees()){
+            if(emp instanceof Developer){
+                ((Developer) emp).code();
+            }
+            if(emp instanceof Coder){
+                ((Coder) emp).complain();
+            }
+        }
+        
     }
 
     public List<Employee> getAllEmployees() {
