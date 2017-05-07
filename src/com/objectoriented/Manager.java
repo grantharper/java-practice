@@ -3,10 +3,11 @@ package com.objectoriented;
 public class Manager extends Employee {
 
     private static final double MANAGER_SALARY = 100_000.0;
+    private static final double MANAGER_RAISE_FACTOR = 1.10;
     
     public Manager(String name) {
         super(name);
-        super.setSalary(MANAGER_SALARY);
+        this.salary = MANAGER_SALARY;
     }
 
     @Override
@@ -15,7 +16,10 @@ public class Manager extends Employee {
     }
     
     public void payRaise(){
-        super.setSalary(super.getSalary() * 1.10);
+    	//since salary is protected, this could work, but should use the setter instead
+        //this.salary *= MANAGER_RAISE_FACTOR;
+    	//setSalary(this.salary * MANAGER_RAISE_FACTOR);
+    	setSalary(getSalary() * MANAGER_RAISE_FACTOR);
     }
 
 }
