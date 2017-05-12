@@ -38,5 +38,26 @@ public class Primitives {
 		byte b = 2;
 		return b;
 	}
+	
+	static void charPractice(){
+		
+		char c = 'a';
+		int f = 10;
+		//results in a compilation error because int can't be narrowed to char
+		//c = f;
+		final int g = 10;
+		//does not result in a compilation error because the value is known at compile time
+		c = g;
+		
+		byte b = 1;
+		//even though char has a good positive range for byte, the negatives make this impossible
+		//c = b;
+		
+		final long l = 100L;
+		//even though the long is final and within range, this cannot be implicitly narrowed
+		//c = l;
+		
+		
+	}
 
 }

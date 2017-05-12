@@ -19,6 +19,11 @@ public abstract class Employee {
         this.name = name;
         this.email = name + "@" + Office.companyName + ".com";
     }
+    
+    public Employee(){
+    	//call to other constructor MUST be the first line
+    	this("fake");
+    }
 
     //only a getter for a number of employee instance variables are present to make sure nobody can set it
     public int getId() {
