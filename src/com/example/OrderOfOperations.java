@@ -48,6 +48,16 @@ public class OrderOfOperations {
 			System.out.println("false"); 
 		}
 		
+		
+		//using parentheses to override operator precedence. Does this apply to postfix evaluation? No.
+		System.out.println("Operator precendence");
+		reset();
+		System.out.println((j++ + i) / 2.0 ); //if post is evaluated in parentheses, 13 / 2 = 6.5, else 12 / 2 = 6. It is 6
+		currentState();
+		reset();
+		System.out.println((j++) + (i++)); //going to be 12, not 14
+		currentState();
+		
 	}
 	
 	public static int[] getArray(){

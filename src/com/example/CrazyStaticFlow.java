@@ -5,6 +5,8 @@ public class CrazyStaticFlow {
 	public static void main(String[] args) {
 		System.out.println("Application main method started");
 		CrazyStaticFlow csf = new CrazyStaticFlow();
+		//Static methods of AnotherClass don't get executed unless it is referenced AND instantiated
+		AnotherClass ac = new AnotherClass();
 	}
 	
 	static {
@@ -48,4 +50,11 @@ public class CrazyStaticFlow {
 		return "a";
 	}
 
+}
+
+class AnotherClass{
+    
+    static{
+        System.out.println("Another class is running its static initializer");
+    }
 }
