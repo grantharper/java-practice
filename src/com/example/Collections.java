@@ -21,6 +21,9 @@ public class Collections {
 		stringList.add("AAA");
 		stringList.add("C");
 		stringList.add("B");
+		//sublist adds the parts of the list from a certain index to another
+		//this sublist is empty, so it doesn't affect the list at all
+		System.out.println("Did the sublist add anything? " + stringList.addAll(stringList.subList(1, 1)));
 		
 		personList = new ArrayList<>();
 		Person person1 = new Person();
