@@ -20,5 +20,26 @@ public class Developer extends Employee implements Coder{
         System.out.println("I'm coding!");
         
     }
+    
+    //This return type is not allowed becuase it is not compatible with the primitive return type of Employee
+	// public Integer overrideMe(){
+	// return 1;
+	// }
+    
+    //can also just keep the Employee object reference here instead of explicitly stating it returns Developer
+    public Employee getAnEmployee(){
+    	return new Developer("Dev Girl");
+    }
+    
+  //cannot throw a parent exception to the method from Employee
+	// public void showFatigue() throws Exception{
+	//
+	// }
+    
+    public void showFatigue() throws TiredException{
+    	throw new TiredException();
+    }
+    
+    
 
 }

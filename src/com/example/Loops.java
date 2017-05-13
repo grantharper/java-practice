@@ -100,6 +100,13 @@ public class Loops {
             while(i1 < 0);
         
         System.out.println(i1); //prints 1
+        
+        
+        //having a while(false) is not allowed
+		// while(false){
+		// System.out.println("can't reach this code");
+		// }
+        
     }
 
 }

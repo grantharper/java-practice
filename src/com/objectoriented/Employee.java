@@ -59,4 +59,13 @@ public abstract class Employee {
     	System.out.println(this.name + " makes $" + this.salary);
     }
     
+    //because this has a primitive type, the overriding methods, must match the return type exactly
+    public int overrideMe(){
+    	return 1;
+    }
+    
+    public abstract Employee getAnEmployee();
+    
+    public abstract void showFatigue() throws TiredException;
+    
 }
